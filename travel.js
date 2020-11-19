@@ -1,5 +1,6 @@
 const express = require("express");
 const expressHandlebars = require("express-handlebars");
+const message = require("./lib/message");
 
 //usar assim requer o "type":"module" no package.json
 //import express from "express";
@@ -7,14 +8,6 @@ const expressHandlebars = require("express-handlebars");
 
 const app = express();
 const port = process.env.PORT || 3000;
-
-const messages = [
-  "Conquiste seus medos ou deixe eles te conquistarem",
-  "Rios precisam de primaveras",
-  "Não tenha medo do que você não saiba",
-  "Você terá uma gostosa surpresa",
-  "Nada é impossível, seja simples",
-];
 
 app.engine(
   "handlebars",
@@ -27,8 +20,7 @@ app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => res.render("home"));
 app.get("/about", (req, res) => {
-  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-  res.render("about", { message: randomMessage });
+  res.render("about", { message: message.getMessages });
 });
 
 app.use(express.static(__dirname + "/public"));
