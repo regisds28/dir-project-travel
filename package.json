@@ -4,6 +4,7 @@
   "description": "back-end site de turismo de Brasilia",
   "main": "travel.js",
   "scripts": {
+    "start": "start",
     "test": "jest"
   },
   "author": "Regis Paiva",
@@ -15,5 +16,6 @@
   },
   "devDependencies": {
     "jest": "^26.6.3"
-  }
+  },
+  "repository": "https://github.com/regisds28/dir-project-travel.git"
 }
