@@ -4,7 +4,8 @@
   "description": "back-end site de turismo de Brasilia",
   "main": "travel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "start",
+    "test": "jest"
   },
   "author": "Regis Paiva",
   "license": "ISC",
@@ -13,5 +14,9 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "nodemon": "^2.0.6"
-  }
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "repository": "https://github.com/regisds28/dir-project-travel.git"
 }
